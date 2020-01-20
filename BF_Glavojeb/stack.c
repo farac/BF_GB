@@ -1,4 +1,5 @@
 #pragma warning(disable:4996)		//ko CRT_NO_
+#pragma once
 #include "stack.h"
 #include <stdio.h>
 #include "opcodes.h"

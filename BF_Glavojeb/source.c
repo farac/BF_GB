@@ -1,6 +1,8 @@
-#pragma warning(disable:4996)		//ko CRT_NO_
+#pragma warning(disable:4996)	//ko CRT_NO_
+#pragma once
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "stack.h"
 #include "opcodes.h"
 
@@ -18,11 +20,11 @@ int main(int argc, char* argv[]) {
 	HeadI = (P_NodeI)malloc(sizeof(struct NodeI));
 	HeadI->Next = NULL;
 
-
-	//if (argc == 1)				//da mos udrit "glavojeb.exe proizvoljno.bf pozelji.c"
-	//	*filenameIN = argv[1];
-	//else if (argc >= 2)
-	//	*filenameOUT = argv[2];
+	printf("%s", argv[0]);
+	if (argc == 2 && argv[1]!=NULL)								//da mos udrit "GB.exe proizvoljno.bf pozelji.c"
+		strcpy(filenameIN, argv[1]);
+	if (argc >= 3 )
+		strcpy(filenameOUT, argv[2]);
 
 	BFFileToStack(HeadI, filenameIN);
 	printf("Loaded code:\n");
@@ -74,7 +76,7 @@ int optRedundantLoopBegining(P_NodeI Head) {
 	}
 	I = Head->Next;									//samo radi incomplete warrninga
 	if (I != NULL && I->opCode == OP_WHILE_OPEN)	//provjera null za "file je cili [][][] edgecase
-		optRedundantLoopBegining(Head);				//rekurzija za jebat svima mater ako ih vise
+		optRedundantLoopBegining(Head);				//rekurzija za sve ih ako ih je vise
 	return SUCCESS;
 }
 
