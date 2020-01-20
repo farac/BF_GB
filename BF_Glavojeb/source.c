@@ -25,7 +25,6 @@ int main(int argc, char* argv[]) {
 	//	*filenameOUT = argv[2];
 
 	BFFileToStack(HeadI, filenameIN);
-
 	printf("Loaded code:\n");
 	PrintAsBF(HeadI);
 	printf("\n\n\n");
