@@ -1,6 +1,6 @@
 #define SUCCESS			0
 #define ERROR			-1
-
+#define NAN				
 							//char mem[65536] = {0};
 							//int p=0;
 
@@ -12,3 +12,4 @@
 #define OP_INPUT		6	//	,	mem[p] = getchar()
 #define OP_WHILE_OPEN	7	//	[	while (mem[p]){
 #define OP_WHILE_CLOSE	8	//	]	}
+							// OP_CLEAR?, OP_MUL?

@@ -22,8 +22,8 @@ P_NodeI NewBlankElementI();
 int PrintStackI(P_NodeI);
 int PrintAsBF(P_NodeI);
 int PrintAsI(P_NodeI);
-int BFFileToStack(P_NodeI);
-int StacktoCFile(P_NodeI Head);
+int BFFileToStack(P_NodeI, char*);
+int StackToCFile(P_NodeI, char*);
 
 //#endif // !STACK_H_INCL
 
