@@ -20,11 +20,13 @@ int main(int argc, char* argv[]) {
 	HeadI = (P_NodeI)malloc(sizeof(struct NodeI));
 	HeadI->Next = NULL;
 
-	printf("%s", argv[0]);
+	
 	if (argc == 2 && argv[1]!=NULL)								//da mos udrit "GB.exe proizvoljno.bf pozelji.c"
 		strcpy(filenameIN, argv[1]);
-	if (argc >= 3 )
+	if (argc >= 3 && argv[2] != NULL)
 		strcpy(filenameOUT, argv[2]);
+
+	printf("Translating from file %s to file %s...\n\n", filenameIN, filenameOUT);
 
 	BFFileToStack(HeadI, filenameIN);
 	printf("Loaded code:\n");
@@ -99,7 +101,7 @@ int optRedundantTrailingLoops(P_NodeI Head) {
 	}
 
 	
-	while (From != NULL && From->Next != I) {
+	while (From != NULL && From->Next != I && c==2) {			//c=2 jer ne brise kad nije nasa 2 zagrade trailing, edgecase kad nema sta brisat
 		PopI(From);
 	}
 

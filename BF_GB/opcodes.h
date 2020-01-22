@@ -1,6 +1,6 @@
 #define SUCCESS			0
-#define ERROR			-1
-#define NAN				
+#define ERROR			-1		
+
 							//char mem[65536] = {0};
 							//int p=0;
 

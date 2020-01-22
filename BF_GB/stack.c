@@ -193,10 +193,10 @@ int StackToCFile(P_NodeI P, char* fileName) {
 	}
 
 	else {
-		fprintf(fp, "#include <stdio.h>;\n");
+		fprintf(fp, "#include <stdio.h>\n");
 		fprintf(fp, "char mem[65536] = { 0 };\n");
 		fprintf(fp, "int p=0;\n\n");
-		fprintf(fp, "int main(){;\n\n");
+		fprintf(fp, "int main(){\n\n");
 		while (P != NULL) {
 			switch (P->opCode) {
 			case OP_RIGHT:			fprintf(fp, "p +=%hu;\n", P->x);			break;
