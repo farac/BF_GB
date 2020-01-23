@@ -101,7 +101,7 @@ int optRedundantTrailingLoops(P_NodeI Head) {
 	}
 
 	
-	while (From != NULL && From->Next != I && c==2) {			//c=2 jer ne brise kad nije nasa 2 zagrade trailing, edgecase kad nema sta brisat
+	while (From != NULL && From->Next != I && c>=2) {			//c=2 jer ne brise kad nije nasa 2 zagrade trailing, edgecase kad nema sta brisat
 		PopI(From);
 	}
 
