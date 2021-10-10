@@ -12,9 +12,6 @@ while (mem[p]){
 putchar (mem[p]);
 mem[p] -=1;
 }
-while (mem[p]){
-mem[p] -=2;
-}
 mem[p] = getchar();
 putchar (mem[p]);
 mem[p] = getchar();
